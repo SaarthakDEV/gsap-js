@@ -38,17 +38,17 @@ gsap.from(
 
 
 
-gsap.from("h1", {
-    color: "red",
-    duration: 1,
-    delay: 1,
-    opacity: 0,
-    y: 50,
-    // stagger: 0,
-    stagger: -1,
-    // repeat: 3,
-    yoyo: true,
-})
+// gsap.from("h1", {
+//     color: "red",
+//     duration: 1,
+//     delay: 1,
+//     opacity: 0,
+//     y: 50,
+//     // stagger: 0,
+//     stagger: -1,
+//     // repeat: 3,
+//     yoyo: true,
+// })
 
 const tl = gsap.timeline();
 
@@ -66,4 +66,64 @@ tl.to("#timeline-box-2", {
 tl.to("#timeline-box-3", {
     x: 1000,
     duration: 2
+})
+
+
+
+
+gsap.from( "#page-1 #page-box", {
+    rotate: 360,
+    scale: 0,
+    delay: 1,
+    duration: 2,
+})
+
+// gsap.from( "#page-2 #page-box", {
+//     rotate: 360,
+//     scale: 0,
+//     delay: 1,
+//     duration: 2,
+//     scrollTrigger: {
+//         trigger: "#page-2 #page-box",
+//         scroller: "body",
+//         markers: true,
+//         start: "top 50% "
+//     }
+// })
+
+
+gsap.from("#page-2 #page-box", {
+    opacity: 0,
+    scale: 0,
+    rotate: 720,
+    duration: 1,
+    scrollTrigger: {
+        trigger: "#page-2 #page-box",
+        scroller: "body",
+        // markers: true,
+        start: "top 50%",
+        // end: "top 30%",
+        scrub: true,
+        pin: true,
+    }
+})
+
+// gsap.from( "#page-1 #page-box", {
+//     rotate: 360,
+//     scale: 0,
+//     delay: 1,
+//     duration: 2,
+// })
+
+gsap.to("#h-scroll-2 h1", {
+    transform: "translate(-200%)",
+    scrollTrigger: {
+        trigger: "#h-scroll-2",
+        scroller: "body",
+        scrub: true,
+        pin: true,
+        markers: true,
+        start: "top 0%",
+        end: "top -100%",
+    }
 })

@@ -13,6 +13,10 @@ body {
     color: white;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 #box {
     height: 300px;
     width: 300px;
@@ -39,4 +43,62 @@ body {
     background-color:brown;
     height: 200px;
     width: 200px;
+}
+
+
+#page-1 {
+    height: 100vh;
+    width: 100vw;
+    background-color: lightblue;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+#page-2 {
+height: 100vh;
+    width: 100vw;
+    background-color: pink;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+#page-3 {
+height: 100vh;
+    width: 100vw;
+    background-color: lightgreen;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#page-box {
+    width: 300px;
+    height: 300px;
+    background-color: red;
+    
+}
+
+
+
+
+#h-scroll-1 {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+#h-scroll-2 {
+    height: 100%;
+    width: 100%;
+    background-color: lightblue;
+    color: black;
+}
+#h-scroll-3 {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+#h-scroll-2 h1 {
+    font-size: 40vw;
+    text-transform: uppercase;
 }
