@@ -127,3 +127,95 @@ gsap.to("#h-scroll-2 h1", {
         end: "top -100%",
     }
 })
+
+
+
+
+// const initialPath = "M 0 0 Q 150 0 300 0";
+
+// const string = document.querySelector("#string")
+
+// string.addEventListener("mousemove", (e) => {
+//     console.log(e.offsetX, e.x);
+//     // console.log(string.getBoundingClientRect())
+//     const path = `M 0 10 Q 150 ${e.y} 300 10`;
+//     gsap.to("svg path", {
+//         attr: {
+//             d: path
+//         },
+//         duration: 0.2,
+//         ease: 'power3.out',
+//     })
+// });
+
+// string.addEventListener("mouseleave", () => {
+//     gsap.to("svg path", {
+//         attr: {
+//             d: initialPath,
+//         },
+//         duration: 1.5,
+//         ease: "elastic.out(1, 0.2)"
+//     })
+// })
+
+
+
+
+// const cursor = document.querySelector("#cursor");
+// console.log(document);
+// console.log(cursor);
+// document.addEventListener("mousemove", (e) => {
+//     console.log("first")
+//     gsap.to(cursor, {
+//         x: e.x-8,
+//         y: e.y-8,
+//         duration: 0.1,
+//     })
+// })
+
+
+// const image = document.querySelector("#image");
+
+// image.addEventListener("mouseenter", (e) => {
+//     console.log("first")
+//     gsap.to(cursor, {
+//         scale: 4
+//     })
+// })
+// image.addEventListener("mouseleave", (e) => {
+//     console.log("leave")
+//     gsap.to(cursor, {
+//         scale: 1
+//     })
+// })
+
+
+
+
+const tln = gsap.timeline({ paused: true });
+
+tln.to("#full", {
+    right: 0,
+    // duration: 1,
+})
+
+tln.from("#full h4", {
+    x: 100,
+    opacity: 0,
+    // duration: 1,
+    // stagger: 1
+})
+
+tln.from("#full #ic", {
+    opacity: 0
+})
+
+
+const openBtn = document.querySelector("#i.open").addEventListener("click", () => {
+    tln.play();
+})
+console.log(document.querySelector("#full #ic.close"))
+const closeBtn = document.querySelector("#full #ic.close").addEventListener("click", () => {
+    console.log("first")
+    tln.reverse();
+})
