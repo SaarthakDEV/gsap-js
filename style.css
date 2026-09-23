@@ -183,3 +183,51 @@ height: 100vh;
     top: 50px;
     right: 50px;
 }
+
+
+
+#text-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+}
+
+h1 span {
+    display: inline-block;
+}
+
+
+
+#page1, #page2, #page3 {
+    height: 100%;
+    width: 100%;
+}
+
+#move {
+    background-color: #D8FF08;
+    color: black;
+    display: flex;
+    gap: 3vw;
+    overflow: hidden;
+}
+
+.marque {
+
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+    padding: 0.5vw 0.15vw;
+    flex-shrink: 0;
+
+    transform: translateX(-100%);
+}
+.marque h1 {
+
+}
+
+.marque span{
+    font-size: 40px;
+}
